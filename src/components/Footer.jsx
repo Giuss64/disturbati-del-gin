@@ -29,9 +29,7 @@ export default function Footer() {
               </div>
               <div>
                 <div style={{ fontWeight: 700 }}>I Disturbati del Gin</div>
-                <div style={{ fontSize: 13, color: "#bbb" }}>
-                  Gin Tonic Society
-                </div>
+                <div style={{ fontSize: 13, color: "#bbb" }}>Gin Tonic Society</div>
               </div>
             </div>
             <p style={{ marginTop: 12, fontSize: 14, color: "#ccc" }}>
