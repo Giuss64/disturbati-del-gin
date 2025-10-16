@@ -1,15 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer"; // se non esiste, puoi rimuovere questa riga e il <Footer/>
+import SiteFooter from "./components/Footer"; // ⬅️ rinominato per evitare conflitti
 
+// Pagine
 import Home from "./pages/Home";
 import Ricette from "./pages/Ricette";
 import Builder from "./pages/Builder";
 import Eventi from "./pages/Eventi";
 import Contatti from "./pages/Contatti";
 import Gin from "./pages/Gin";
-import Footer from "./components/Footer";
 import GalleriaEventi from "./pages/GalleriaEventi"; // se non usi la galleria, rimuovi import e rotta
 
 export default function App() {
@@ -34,7 +34,7 @@ export default function App() {
           }
         />
       </Routes>
-      <Footer />
+      <SiteFooter /> {/* ⬅️ usa il nuovo nome */}
     </div>
   );
 }
