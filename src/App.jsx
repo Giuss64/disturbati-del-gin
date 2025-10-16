@@ -10,7 +10,7 @@ import Builder from './pages/Builder'
 import Eventi from './pages/Eventi'
 import Contatti from './pages/Contatti'
 import Gin from './pages/Gin'
-import GalleriaEventi from './pages/GalleriaEventi'
+
 
 export default function App(){
   return (
@@ -23,7 +23,7 @@ export default function App(){
         <Route path="/eventi" element={<Eventi />} />
         <Route path="/contatti" element={<Contatti />} />
         <Route path="/gin" element={<Gin />} />
-        <Route path="/eventi-foto" element={<GalleriaEventi />} />
+        
         <Route path="*" element={<div className="container" style={{padding:'48px 16px'}}>Pagina non trovata.</div>} />
       </Routes>
       <Footer />
