@@ -89,7 +89,7 @@ export default function Home(){
               { img: '/giuseppe.jpg',  name: 'Giuseppe',  role: 'Il fotografo del gin' },
               { img: '/mimmo.jpg',     name: 'Mimmo',     role: 'Il degustatore' },
               { img: '/marco.jpg',     name: 'Marco',     role: 'Il regista' },
-              { img: '/rosa.jpg',      name: 'Rosa',      role: 'L’ammazza gin e l'ammazza Peppe' },
+              { img: '/rosa.jpg',      name: 'Rosa',      role: 'L’ammazza gin e Peppe' },
               { img: '/virginia.jpg',  name: 'Virginia',  role: 'L’ammazza gin' },
               { img: '/francesca.jpg', name: 'Francesca', role: 'La Orange Gin' },
               { img: '/lory.jpg',      name: 'Lory',      role: 'La sua adepta' },
