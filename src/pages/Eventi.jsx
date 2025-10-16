@@ -20,7 +20,7 @@ export default function Eventi(){
           </div></div>
           <div className="evento">
   <h3 style={{margin:'6px 0'}}>Compleanno Mena 🎂</h3>
-  <p>17 ottobre 2025 — Galleria Navarra 🥂</p>
+  <p>17 ottobre 2025 — Galleria Leone 🥂</p>
   
   <div style={{
     marginTop:'10px',
