@@ -9,6 +9,7 @@ import Builder from "./pages/Builder";
 import Eventi from "./pages/Eventi";
 import Contatti from "./pages/Contatti";
 import Gin from "./pages/Gin";
+import Footer from "./components/Footer";
 import GalleriaEventi from "./pages/GalleriaEventi"; // se non usi la galleria, rimuovi import e rotta
 
 export default function App() {
