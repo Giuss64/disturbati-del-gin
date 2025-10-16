@@ -68,3 +68,17 @@ export default function Ricette(){
     </section>
   )
 }
+{
+  id: 'ginfuoco',
+  title: 'Gin di Fuoco',
+  tagline: 'Per animi forti 🔥',
+  profile: ['Speziato', 'Agrumato', 'Flambé'],
+  steps: [
+    'Riempi un balloon con abbondante ghiaccio.',
+    'Versa 50 ml di gin dry.',
+    'Aggiungi zest d’arancia flambé per dare la nota affumicata.',
+    'Metti un pizzico di peperoncino dolce (o peperoncino in infusione leggera).',
+    'Completa con 150 ml di tonica premium neutra.',
+    'Mescola delicatamente e servi con una scorzetta flambé come garnish 🔥.'
+  ]
+}
