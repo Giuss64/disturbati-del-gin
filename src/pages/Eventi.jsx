@@ -1,42 +1,124 @@
-import React from 'react'
+import React from "react";
 
-export default function Eventi(){
+const EVENTI = [
+  {
+    id: "mena2025",
+    title: "Compleanno Mena",
+    date: "17 Ottobre 2025",
+    place: "Galleria Leone",
+    desc: "Un evento speciale per celebrare con stile: Gin di Fuoco e Walter Number Three per tutti.",
+    highlight: true,
+  },
+  {
+    id: "farinoso2024",
+    title: "Farinoso Estate 2024",
+    date: "Estate 2024",
+    place: "Farinoso",
+    desc: "Il caldo, la musica e i primi gin della stagione. Un inizio d’estate memorabile.",
+  },
+  {
+    id: "mykonos2024",
+    title: "Mykonos Estate 2024",
+    date: "Estate 2024",
+    place: "Mykonos",
+    desc: "Il battesimo ufficiale dei Disturbati del Gin nella patria del sole e della festa.",
+  },
+  {
+    id: "bruscoautunno2024",
+    title: "Brusco Autunno 2024",
+    date: "Autunno 2024",
+    place: "Brusco",
+    desc: "Gin, chiacchiere e prime foglie cadenti: l’autunno in stile Disturbati.",
+  },
+  {
+    id: "myoinverno2024",
+    title: "Myo Inverno 2024",
+    date: "Inverno 2024",
+    place: "Myo",
+    desc: "Un inverno riscaldato dai migliori gin dry e dall’atmosfera elegante del Myo.",
+  },
+  {
+    id: "carnevale2025",
+    title: "Carnevale 2025",
+    date: "Febbraio 2025",
+    place: "Napoli",
+    desc: "Maschere, coriandoli e Gin Tonic flambé per un carnevale disturbato come si deve.",
+  },
+  {
+    id: "frontemareprimavera2025",
+    title: "Frontemare Primavera 2025",
+    date: "Primavera 2025",
+    place: "Frontemare",
+    desc: "L’arrivo della bella stagione tra tramonti e cocktail perfetti sul mare.",
+  },
+  {
+    id: "bruscopasquetta2025",
+    title: "Brusco Pasquetta 2025",
+    date: "Pasquetta 2025",
+    place: "Brusco",
+    desc: "Grigliate, brindisi e gin tonic per un lunedì dell’angelo tutto da ricordare.",
+  },
+  {
+    id: "riservarooftop2025",
+    title: "Riserva Rooftop Estate 2025",
+    date: "Estate 2025",
+    place: "Riserva Rooftop",
+    desc: "Sotto le stelle, i gin diventano ancora più buoni. Una serata elegante e scatenata.",
+  },
+  {
+    id: "ponza2025",
+    title: "Ponza Estate 2025",
+    date: "Estate 2025",
+    place: "Ponza",
+    desc: "Catamarano, tramonti e Disturbati in versione nautica. Gin e mare: combo perfetta.",
+  },
+  {
+    id: "paestum2025",
+    title: "Paestum Estate 2025",
+    date: "Estate 2025",
+    place: "Paestum",
+    desc: "Estate e gin tra i templi: un appuntamento diventato ormai tradizione.",
+  },
+  {
+    id: "mykonos2025",
+    title: "Mykonos Estate 2025",
+    date: "Estate 2025",
+    place: "Mykonos",
+    desc: "La spedizione ufficiale Disturbati: sole, mare, musica e gin tonic perfetti.",
+  },
+];
+
+export default function Eventi() {
   return (
     <section className="section">
       <div className="container">
-        <h2 style={{marginTop:0}}>Eventi & Rituali</h2>
-        <p style={{color:'#666'}}>Serate a tema, degustazioni e grandi trasferte del gruppo.</p>
+        <h2 style={{ marginTop: 0 }}>Eventi Disturbati</h2>
+        <p style={{ color: "#666" }}>
+          Tutti i momenti più iconici della nostra Gin Tonic Society. Passati, presenti e futuri 🍸
+        </p>
 
-        <div className="grid grid-3" style={{marginTop:16}}>
-          {/* PROSSIMO EVENTO con ancora */}
-          <div id="prossimo" className="card">
-            <div className="card-body">
-              <h3 style={{margin:'6px 0'}}>Compleanno Mena 🎂</h3>
-              <div style={{color:'#777',marginBottom:8}}>17 ottobre 2025 — Galleria Leone</div>
-              <p style={{color:'#555'}}>Special drink: <b>Gin di Fuoco</b> 🔥 e “Walter Number Three” per i puristi.</p>
-              <img
-                src="/eventi/mena-birthday.jpg"
-                alt="Compleanno Mena – Galleria Leone"
-                onError={(e)=>{ e.currentTarget.style.display='none' }}
-                style={{width:'100%', borderRadius:'8px', marginTop:'10px', border:'1px solid #eee'}}
-              />
+        <div className="grid grid-2" style={{ marginTop: 20 }}>
+          {EVENTI.map((e) => (
+            <div
+              key={e.id}
+              id={e.highlight ? "prossimo" : undefined}
+              className="card"
+              style={{
+                border: e.highlight ? "2px solid #f97316" : "1px solid #ddd",
+                background: e.highlight ? "#fff7f0" : "white",
+              }}
+            >
+              <div className="card-body">
+                <h3 style={{ margin: "6px 0" }}>{e.title}</h3>
+                <div style={{ color: "#777", marginBottom: 8 }}>
+                  {e.date} — {e.place}
+                </div>
+                <p style={{ color: "#555" }}>{e.desc}</p>
+              </div>
             </div>
-          </div>
-
-          {/* Altri eventi di esempio */}
-          <div className="card"><div className="card-body">
-            <h3 style={{margin:'6px 0'}}>Mykonos Night</h3>
-            <div style={{color:'#777',marginBottom:8}}>Settembre – Signature party dei Disturbati</div>
-            <p style={{color:'#555'}}>Dress code: bianco & lime. Playlist funk e photo corner con garnish bar.</p>
-          </div></div>
-
-          <div className="card"><div className="card-body">
-            <h3 style={{margin:'6px 0'}}>Colmar Christmas Markets</h3>
-            <div style={{color:'#777',marginBottom:8}}>Dicembre – Tour alsaziano con stop gin-friendly</div>
-            <p style={{color:'#555'}}>Luci, vin brulè (con moderazione 😉) e ricerca di tonic water locali.</p>
-          </div></div>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
