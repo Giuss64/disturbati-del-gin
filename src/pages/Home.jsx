@@ -93,7 +93,7 @@ export default function Home(){
               { img: '/virginia.jpg',  name: 'Virginia',  role: 'L’ammazza gin' },
               { img: '/francesca.jpg', name: 'Francesca', role: 'La Orange Gin' },
               { img: '/lory.jpg',      name: 'Lory',      role: 'La sua adepta' },
-              { img: '/mena.jpg',      name: 'Mena',      role: 'La new entry' },
+              { img: '/mena.jpg',      name: 'Mena',      role: 'Aiuto regista' },
             ].map(person => (
               <div key={person.name} className="card" style={{ textAlign:'center', paddingBottom:12 }}>
                 <img
