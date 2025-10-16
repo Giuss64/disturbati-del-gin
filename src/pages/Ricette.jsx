@@ -36,7 +36,38 @@ const RECIPES = [{
     '150 ml tonica al pompelmo',
     'Garnish: fetta di pompelmo, fiori eduli',
   ]
-}]
+},
+// 🔥 Nuova ricetta: Gin di Fuoco
+{
+  id: 'ginfuoco',
+  title: 'Gin di Fuoco',
+  tagline: 'Per animi forti 🔥',
+  profile: ['Speziato', 'Agrumato', 'Flambé'],
+  steps: [
+    'Riempi un balloon con abbondante ghiaccio.',
+    'Versa 50 ml di gin dry.',
+    'Aggiungi zest d’arancia flambé per dare la nota affumicata.',
+    'Metti un pizzico di peperoncino dolce (o peperoncino in infusione leggera).',
+    'Completa con 150 ml di tonica premium neutra.',
+    'Mescola delicatamente e servi con una scorzetta flambé come garnish 🔥.'
+  ]
+},
+// 🧊 Nuova ricetta: Walter Number Three (dry & alcolico)
+{
+  id: 'walternumberthree',
+  title: 'Walter Number Three',
+  tagline: 'Gin Tonic secco e deciso 🍸',
+  profile: ['Dry', 'Alcolico', 'Classico'],
+  steps: [
+    'Riempi un bicchiere Highball con ghiaccio cristallino.',
+    'Versa 60 ml di gin dry di alta qualità (preferibilmente Number 3).',
+    'Aggiungi 120 ml di tonica premium neutra, ben fredda.',
+    'Mescola delicatamente con un bar spoon per amalgamare.',
+    'Garnish con una scorza sottile di limone (senza polpa) per esaltare le note dry.',
+    'Servi immediatamente, senza cannucce. È un drink per intenditori 🥂.'
+  ]
+}
+];
 
 export default function Ricette(){
   return (
@@ -67,18 +98,4 @@ export default function Ricette(){
       </div>
     </section>
   )
-}
-{
-  id: 'ginfuoco',
-  title: 'Gin di Fuoco',
-  tagline: 'Per animi forti 🔥',
-  profile: ['Speziato', 'Agrumato', 'Flambé'],
-  steps: [
-    'Riempi un balloon con abbondante ghiaccio.',
-    'Versa 50 ml di gin dry.',
-    'Aggiungi zest d’arancia flambé per dare la nota affumicata.',
-    'Metti un pizzico di peperoncino dolce (o peperoncino in infusione leggera).',
-    'Completa con 150 ml di tonica premium neutra.',
-    'Mescola delicatamente e servi con una scorzetta flambé come garnish 🔥.'
-  ]
 }
