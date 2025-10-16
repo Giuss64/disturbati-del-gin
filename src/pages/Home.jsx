@@ -1,38 +1,58 @@
 import React from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { Link } from 'react-router-dom'       // ⬅️ aggiunto
-import groupImg from '../assets/group.jpg'
+import { Link } from 'react-router-dom'
 
-export default function Home(){
-  const ref = React.useRef(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end','end start'] })
-  const y = useTransform(scrollYProgress, [0,1], ['-10%','10%'])
-
+export default function Home() {
   return (
-    <div>
-      <section className="hero" ref={ref}>
-        <motion.div style={{ position:'absolute', inset:0, y }} initial={{opacity:0, scale:1.05}} animate={{opacity:1, scale:1}} transition={{duration:1}}>
-          <img src={groupImg} alt="Gruppo I Disturbati del Gin" style={{width:'100%',height:'100%',objectFit:'cover'}}/>
-          <div className="overlay" />
-        </motion.div>
-        <motion.div className="content" initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:1, delay:.3}}>
-          <span className="badge">Community</span>
-          <h1>I Disturbati del Gin</h1>
-          <p>La pagina ufficiale dedicata al Gin Tonic: ricette signature, consigli sulle botaniche e gli eventi del nostro gruppo.</p>
-          <div style={{marginTop:16, display:'flex',gap:12,justifyContent:'center'}}>
-            {/* ⬇️ LINK SPA: niente ricarica, niente 404 */}
-            <Link to="/ricette" className="btn">Scopri le ricette</Link>
-            <Link to="/builder" className="btn secondary">Crea il tuo mix</Link>
-          </div>
-        </motion.div>
-      </section>
+    <section className="section">
+      <div className="container">
+        {/* Testo di Benvenuto */}
+        <h1 style={{marginTop: 0}}>Benvenuto nella nostra Gin Tonic Society</h1>
+        <p style={{color:'#555', fontSize:'18px', lineHeight:'1.6'}}>
+          Freddi come il ghiaccio, rumorosi come i cubetti. <br/>
+          Segui le ricette, crea il tuo mix perfetto e scopri i momenti unici del nostro gruppo.
+        </p>
 
-      <section className="section">
-        <div className="container">
-          <h2 style={{marginTop:0}}>Benvenuto nella nostra Gin Tonic Society</h2>
-          <p style={{color:'#555'}}>Freddi come il ghiaccio, rumorosi come i cubetti. Segui le ricette o crea il tuo mix perfetto.</p>
+        {/* Pulsanti di navigazione */}
+        <div style={{marginTop: 24, display:'flex', gap:16, flexWrap:'wrap'}}>
+          <Link to="/ricette" className="button primary">Scopri le ricette</Link>
+          <Link to="/builder" className="button secondary">Crea il tuo mix</Link>
+          <Link to="/eventi" className="button secondary">Eventi</Link>
+          <Link to="/contatti" className="button secondary">Contatti</Link>
         </div>
-      </section>
-    </div>
+
+        {/* Sezione Il nostro gruppo */}
+        <section className="friends-section" style={{marginTop: 48}}>
+          <h2>Il nostro gruppo</h2>
+          <p style={{color:'#666', marginBottom: 16}}>
+            Gli irriducibili del Gin Tonic: ognuno con il proprio stile, ma uniti dalla stessa passione 🍸
+          </p>
+
+          <div className="grid grid-3" style={{marginTop: 16}}>
+            {[
+              {name: 'Walter', role: "L'intenditore di gin", img: '/walter.jpg'},
+              {name: 'Francesco', role: 'Il preparatore di gin', img: '/francesco.jpg'},
+              {name: 'Giuseppe', role: 'Il fotografo del gin', img: '/giuseppe.jpg'},
+              {name: 'Mimmo', role: 'Il degustatore', img: '/mimmo.jpg'},
+              {name: 'Marco', role: 'Il regista', img: '/marco.jpg'},
+              {name: 'Rosa', role: 'Le ammazza gin', img: '/rosa.jpg'},
+              {name: 'Virginia', role: 'Le ammazza gin', img: '/virginia.jpg'},
+              {name: 'Francesca', role: 'La orange gin', img: '/francesca.jpg'},
+              {name: 'Lory', role: 'La sua adepta', img: '/lory.jpg'},
+              {name: 'Mena', role: 'La new entry', img: '/mena.jpg'},
+            ].map(friend => (
+              <div key={friend.name} className="card" style={{textAlign:'center'}}>
+                <img 
+                  src={friend.img} 
+                  alt={friend.name} 
+                  style={{width: '100%', borderRadius: '8px', marginBottom: '8px'}}
+                />
+                <h4 style={{margin: '4px 0'}}>{friend.name}</h4>
+                <p style={{color: '#666'}}>{friend.role}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </section>
   )
 }
