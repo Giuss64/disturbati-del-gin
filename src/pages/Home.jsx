@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { Link } from 'react-router-dom'       // ⬅️ aggiunto
 import groupImg from '../assets/group.jpg'
 
 export default function Home(){
@@ -19,8 +20,9 @@ export default function Home(){
           <h1>I Disturbati del Gin</h1>
           <p>La pagina ufficiale dedicata al Gin Tonic: ricette signature, consigli sulle botaniche e gli eventi del nostro gruppo.</p>
           <div style={{marginTop:16, display:'flex',gap:12,justifyContent:'center'}}>
-            <a href="/ricette" className="btn">Scopri le ricette</a>
-            <a href="/builder" className="btn secondary">Crea il tuo mix</a>
+            {/* ⬇️ LINK SPA: niente ricarica, niente 404 */}
+            <Link to="/ricette" className="btn">Scopri le ricette</Link>
+            <Link to="/builder" className="btn secondary">Crea il tuo mix</Link>
           </div>
         </motion.div>
       </section>
