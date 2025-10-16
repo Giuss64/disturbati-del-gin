@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
+const linkStyle = ({ isActive }) =>
+  'link' + (isActive ? ' active' : '')
+
 export default function Navbar(){
   return (
     <div className="nav">
@@ -12,11 +15,14 @@ export default function Navbar(){
             <div style={{fontSize:12,color:'#666'}}>Gin Tonic Society</div>
           </div>
         </Link>
-        <div>
-          <NavLink to="/ricette" className="link">Ricette</NavLink>
-          <NavLink to="/builder" className="link">Crea il tuo</NavLink>
-          <NavLink to="/eventi" className="link">Eventi</NavLink>
-          <NavLink to="/contatti" className="link">Contatti</NavLink>
+
+        <div style={{display:'flex', alignItems:'center', gap:16, flexWrap:'wrap'}}>
+          <NavLink to="/ricette" className={linkStyle}>Ricette</NavLink>
+          <NavLink to="/builder" className={linkStyle}>Crea il tuo</NavLink>
+          <NavLink to="/gin" className={linkStyle}>Gin</NavLink> {/* ⬅️ nuovo */}
+          <NavLink to="/eventi" className={linkStyle}>Eventi</NavLink>
+          <NavLink to="/eventi-foto" className={linkStyle}>Foto Eventi</NavLink> {/* ⬅️ nuovo */}
+          <NavLink to="/contatti" className={linkStyle}>Contatti</NavLink>
         </div>
       </div>
     </div>
