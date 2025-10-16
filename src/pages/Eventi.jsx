@@ -8,32 +8,27 @@ export default function Eventi(){
         <p style={{color:'#666'}}>Serate a tema, degustazioni e grandi trasferte del gruppo.</p>
 
         <div className="grid grid-3" style={{marginTop:16}}>
+          {/* PROSSIMO EVENTO con ancora */}
+          <div id="prossimo" className="card">
+            <div className="card-body">
+              <h3 style={{margin:'6px 0'}}>Compleanno Mena 🎂</h3>
+              <div style={{color:'#777',marginBottom:8}}>17 ottobre 2025 — Galleria Leone</div>
+              <p style={{color:'#555'}}>Special drink: <b>Gin di Fuoco</b> 🔥 e “Walter Number Three” per i puristi.</p>
+              <img
+                src="/eventi/mena-birthday.jpg"
+                alt="Compleanno Mena – Galleria Leone"
+                onError={(e)=>{ e.currentTarget.style.display='none' }}
+                style={{width:'100%', borderRadius:'8px', marginTop:'10px', border:'1px solid #eee'}}
+              />
+            </div>
+          </div>
+
+          {/* Altri eventi di esempio */}
           <div className="card"><div className="card-body">
             <h3 style={{margin:'6px 0'}}>Mykonos Night</h3>
             <div style={{color:'#777',marginBottom:8}}>Settembre – Signature party dei Disturbati</div>
             <p style={{color:'#555'}}>Dress code: bianco & lime. Playlist funk e photo corner con garnish bar.</p>
           </div></div>
-          <div className="card"><div className="card-body">
-            <h3 style={{margin:'6px 0'}}>Gin & Castagne</h3>
-            <div style={{color:'#777',marginBottom:8}}>Ottobre – Pairing autunnale a Serino</div>
-            <p style={{color:'#555'}}>Toniche dry, gin speziati e cicchetti di stagione. Fuoco acceso, chiacchiere infinite.</p>
-          </div></div>
-          <div className="evento">
-  <h3 style={{margin:'6px 0'}}>Compleanno Mena 🎂</h3>
-  <p>17 ottobre 2025 — Galleria Leone 🥂</p>
-  
-  <div style={{
-    marginTop:'10px',
-    padding:'12px',
-    background:'#fff3e0',
-    border:'2px solid #ff9800',
-    borderRadius:'8px',
-    textAlign:'center'
-  }}>
-    <h4 style={{color:'#e65100', margin:'0 0 6px'}}>🔥 Gin di Fuoco Speciale 🔥</h4>
-    <p style={{margin:0}}>Una ricetta esplosiva creata per l’occasione: gin dry + zest d’arancia flambé + peperoncino dolce + tonica premium. Vietato ai deboli 😎</p>
-  </div>
-</div>
 
           <div className="card"><div className="card-body">
             <h3 style={{margin:'6px 0'}}>Colmar Christmas Markets</h3>
