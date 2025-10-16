@@ -19,7 +19,7 @@ export default function Navbar(){
           <NavLink to="/builder" className={linkClass}>Crea il tuo</NavLink>
           <NavLink to="/gin" className={linkClass}>Gin</NavLink>
           <NavLink to="/eventi" className={linkClass}>Eventi</NavLink>
-          <NavLink to="/eventi-foto" className={linkClass}>Foto Eventi</NavLink>
+          
           <NavLink to="/contatti" className={linkClass}>Contatti</NavLink>
         </nav>
       </div>
