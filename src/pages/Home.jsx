@@ -10,6 +10,23 @@ export default function Home(){
 
   return (
     <div>
+      {/* BANNER PROSSIMO EVENTO (colorato) */}
+      <div
+        style={{
+          position:'sticky', top:0, zIndex:60,
+          background:'#fff4e6', color:'#8a4b00',
+          borderBottom:'1px solid #ffd7a3',
+          padding:'10px 16px', textAlign:'center'
+        }}
+      >
+        <span style={{marginRight:12}}>
+          🎉 Prossimo evento: <b>Compleanno Mena</b> — 17/10/2025 — <b>Galleria Leone</b>
+        </span>
+        <Link to="/eventi#prossimo" className="btn" style={{padding:'6px 10px', borderRadius:10}}>
+          Scopri evento
+        </Link>
+      </div>
+
       {/* HERO */}
       <section className="hero" ref={ref}>
         <motion.div
@@ -42,9 +59,10 @@ export default function Home(){
             La pagina ufficiale dedicata al Gin Tonic: ricette signature, consigli sulle botaniche
             e gli eventi del nostro gruppo.
           </p>
-          <div style={{marginTop:16, display:'flex',gap:12,justifyContent:'center'}}>
+          <div style={{marginTop:16, display:'flex',gap:12,justifyContent:'center', flexWrap:'wrap'}}>
             <Link to="/ricette" className="btn">Scopri le ricette</Link>
             <Link to="/builder" className="btn secondary">Crea il tuo mix</Link>
+            <Link to="/eventi#prossimo" className="btn">Scopri evento</Link>
           </div>
         </motion.div>
       </section>
